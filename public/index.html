@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sanskar Studios — Multiplayer Test</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#090d18;color:#eaf0ff;font:16px system-ui,Segoe UI,sans-serif;display:grid;place-items:center;min-height:100vh;padding:20px}
+    main{width:min(760px,100%);background:#111a2b;border:1px solid #263653;border-radius:18px;padding:24px;box-shadow:0 20px 70px #0008}
+    h1{margin:0 0 6px;font-size:26px}.muted{color:#9fb0cc}.controls{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
+    input,button{border:1px solid #344765;border-radius:10px;padding:11px 13px;background:#0b1322;color:#fff;font:inherit}
+    input{flex:1;min-width:130px}button{background:#6757e8;border:0;font-weight:700;cursor:pointer}button:disabled{opacity:.5;cursor:not-allowed}
+    #status{min-height:24px;color:#9fe3c0}canvas{display:block;width:100%;height:auto;background:#0a1220;border:1px solid #2c3d5a;border-radius:12px;margin-top:12px}
+    #players{line-height:1.7;color:#cbd7ee}.note{font-size:13px;color:#9fb0cc;margin-top:14px}
+  </style>
+</head>
+<body>
+<main>
+  <h1>Sanskar Studios — Multiplayer Test</h1>
+  <div class="muted">A small room-and-movement prototype. This is not yet connected to the 3D game.</div>
+  <div class="controls">
+    <input id="name" maxlength="20" placeholder="Your player name" value="Player 1">
+    <input id="room" maxlength="12" placeholder="Room code" value="SAN1">
+    <button id="connect">Join room</button>
+  </div>
+  <div id="status">Not connected</div>
+  <canvas id="arena" width="700" height="380"></canvas>
+  <h3>Players in room</h3>
+  <div id="players">No players connected.</div>
+  <div class="note">Move with WASD or arrow keys after joining. Open this page in another tab and use the same room code to test two players on this computer.</div>
+</main>
+<script src="/client.js"></script>
+</body>
+</html>

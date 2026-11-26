@@ -1,0 +1,17 @@
+{
+  "name": "sanskar-studios-multiplayer-starter",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A small WebSocket room and movement-sync prototype for local testing.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "ws": "^8.18.3"
+  }
+}
